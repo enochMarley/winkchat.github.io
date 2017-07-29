@@ -1,0 +1,97 @@
+doctype html
+html
+  head
+    title= title
+    meta( charset='utf-8' )
+    meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+    meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+    meta( name='description', content='Wink Chat App' )
+    link(href="https://fonts.googleapis.com/css?family=Roboto:400,300", rel="stylesheet")
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    div.container-fluid.chatroom-div
+      div.row
+        div.col-xs-12.col-md-12
+          span.btn.menu-btn.opt-btn(data-target="#about-modal", data-toggle="modal")
+            i.fa.fa-info-circle
+            span &nbsp;About
+          button.btn.menu-btn.opt-btn(onclick="showSideBar()")
+            i.fa.fa-bars
+            span &nbsp;Menu
+      div.chat-side-nav
+        a.close-btn(href="javascript:void(0)",onclick="hideSideBar()") &times;
+        div.chat-rooms-div-sm
+          span.text-center.rooms-div-title Chat Rooms
+          div.show-rooms
+        br
+        div.chat-users-div-sm
+          span.text-center.users-div-title Users Online
+          div.show-users
+      div.row
+        div.col-md-2.col-sm-2.col-xs-12
+        div.col-md-2.col-sm-2.col-xs-12
+            div.side-div
+              div.about-div
+                span.text-center.about-div-title(data-target="#about-modal", data-toggle="modal")
+                  i.fa.fa-info-circle
+                  span &nbsp;About
+              br
+              div.chat-rooms-div
+                 span.text-center.rooms-div-title
+                  i.fa.fa-th
+                  span &nbsp;Chat Rooms
+
+                 div.show-rooms
+              br
+              div.chat-users-div
+                 span.text-center.users-div-title
+                  i.fa.fa-users
+                  span &nbsp;Users Online
+
+                 div.show-users
+        div.col-md-6.col-md-6.col-sm-6.col-xs-12
+            div.messages-div
+                div.show-messages-div.col-md-12.col-xs-12.col-sm-12
+                div.col-md-12.col-xs-12.col.col-sm-12.chat-input-div
+                  form.chat-form(method="post",enctype="multipart/form-data")
+                    label.input-error
+                    br
+                    input.message-input(type="text",placeholder="Type Your Message Here...",required)
+                    button.btn.send-chat-btn(type="submit")
+                      i.fa.fa-send
+        div.col-md-2.col-sm-2.col-xs-12
+      div.modal.fade#about-modal(role="dialog")
+        div.modal-dialog
+          div.modal-content
+            div.modal-header
+              button.close(type="button",data-dismiss="modal") &times;
+              h4.modal-title About Wink
+            div.modal-body
+              p.text-center.
+                Wink is a real time multi-room chat app built on node js, which supports private messaging.
+                This is the premium version of wink, and updates promise more features.
+              p.text-center
+                b Version:
+                span &nbsp;v1.0.0
+              p.text-center
+                b Developer:
+                span &nbsp;Enoch Marley
+              p.text-center
+                b Contact:
+                br
+                i.fa.fa-envelope
+                span &nbsp;enoch.sowah16@gmail.com
+                br 
+                i.fa.fa-phone
+                span &nbsp;+233 27 172 8188 / +233 50 703 2481
+              p.text-center
+                b License:
+                span &nbsp;MIT
+            div.modal-footer
+              button.btn.btn-default(type="button",data-dismiss="modal") Close
+    script( src='/js/jquery.min.js' )
+    script( src='/js/bootstrap.min.js' )
+    script( src='/socket.io/socket.io.js' )
+    script( src='/js/winkchat.js' )

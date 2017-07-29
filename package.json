@@ -1,0 +1,20 @@
+{
+  "name": "wink_chat_app",
+  "version": "1.0.0",
+  "description": "A Simple Real Time Chat App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --max-old-space-size=2076 server.js"
+  },
+  "author": "Enoch Marley",
+  "license": "MIT",
+  "dependencies": {
+    "express":"^4.15.3",
+    "pug": "^2.0.0-rc.2",
+    "socket.io": "^2.0.3",
+    "express-session":"^1.15.4",
+    "mongoose":"^4.11.4",
+    "body-parser":"^1.17.1"
+  }
+}
