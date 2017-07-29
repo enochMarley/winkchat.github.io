@@ -4,8 +4,7 @@
   "description": "A Simple Real Time Chat App",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --max-old-space-size=2076 server.js"
+    "start": "node app.js"
   },
   "author": "Enoch Marley",
   "license": "MIT",
