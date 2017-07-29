@@ -1,0 +1,7 @@
+{
+	"name": "wink_chat_app",
+	"description": "A Simple Real Time Chat App",
+	"repository":"https://github.com/enochMarley/winkchat.github.io",
+	"keywords":["node","chat","express","socket.io","socket"],
+	"image":"heroki/nodejs"
+}
